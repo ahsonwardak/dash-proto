@@ -20,7 +20,7 @@ npm install
 
 ### Development
 ```bash
-gulp
+./node_modules/gulp/bin/gulp.js
 ```
 This will start up a node server on localhost:3000 to serve the static assets, open up your default browser, and sync any changes to when an update is made. Cool stuff.
 
