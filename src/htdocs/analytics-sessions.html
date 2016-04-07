@@ -1,0 +1,97 @@
+{% extends '_layouts/base.html' %}
+
+{% set container_class = '-minimal' %}
+
+{% set module = 'analytics' %}
+
+{% block content %}
+  <div class="app-content -show-features" role="main">
+    <article class="feature">
+      <header class="feature-header -big-toolbar">
+        <h3>
+          <span>(June 2014 – To Date)</span>
+          Release 3.2
+        </h3>
+        {% include '_shared/analytics-header.html' with {link: 'sessions'} %}
+      </header>
+      <section class="feature-section">
+        <ul class="feature-overview-stats -inline -plr-20">
+          <li class="-large">
+            <h4>Total Sessions</h4>
+            <strong>320,000</strong> <span class="stat -green">10%</span>
+            <div class="graph-img total-sessions-info">
+              <img src="./assets/images/charts/analytics-total-sessions.png">
+              <ul class="extra-info">
+                <li>25% <strong>New</strong></li>
+                <li>75% <strong>Returning</strong></li>
+              </ul>
+            </div>
+          </li>
+          <li class="-small">
+            <h4>Bounce Rate</h4>
+            <strong>15%</strong> <span class="stat -red">5%</span>
+            <div class="graph-img bounce-rate-info">
+              <img src="./assets/images/charts/analytics-bounce-rate.png">
+            </div>
+          </li>
+          <li class="-medium">
+            <h4>Time on Site (Minutes)</h4>
+            <strong>03:18</strong> <span class="stat -red">5%</span>
+            <div class="graph-img time-on-site-info">
+              <img src="./assets/images/charts/analytics-time-on-site.png">
+            </div>
+          </li>
+        </ul>
+        <div class="chart-wrapper -pt-40">
+          <div class="chart-legend">
+            <div class="axis -y">
+              Sessions <em>(Thousands)</em>
+            </div>
+            <div class="axis -x">
+              Week of
+            </div>
+          </div>
+          <div id="analytics-overview-feature-graph"></div>
+        </div>
+      </section>
+    </article>
+    <aside class="app-sidebar -dark">
+      <div class="tabs">
+        <ul class="tabs-navigation">
+          <li class="-active"><a href="#inbound-source">Inbound Source</a></li>
+          <li><a href="#landing-page">Landing Page</a></li>
+        </ul>
+        <div class="tabs-content">
+          <div class="tab -active" id="inbound-source">
+            <ol class="numbered-list">
+              <li>google.com <span class="stat-wrap">2319 <span class="stat -green">6%</span></span></li>
+              <li>facebook.com <span class="stat-wrap">2140 <span class="stat -green">5%</span></span></li>
+              <li>usa.gov <span class="stat-wrap">2068 <span class="stat -red">3%</span></span></li>
+              <li>pa.gov <span class="stat-wrap">1625 <span class="stat -green">6%</span></span></li>
+              <li>ny.gov <span class="stat-wrap">1455 <span class="stat -green">2%</span></span></li>
+              <li>healthcare.org <span class="stat-wrap">1309 <span class="stat -red">3%</span></span></li>
+              <li>state.gov <span class="stat-wrap">1262 <span class="stat -green">6%</span></span></li>
+              <li>whitehouse.gov <span class="stat-wrap">1107 <span class="stat -red">2%</span></span></li>
+              <li>access.wa.gov <span class="stat-wrap">989 <span class="stat -red">4%</span></span></li>
+              <li>medicare.gov <span class="stat-wrap">973 <span class="stat -green">5%</span></span></li>
+            </ol>
+          </div>
+          <div class="tab" id="landing-page">
+            <ol class="numbered-list">
+              <li>access-financing <span class="stat-wrap">1420 <span class="stat -green">5%</span></span></li>
+              <li>start-a-business <span class="stat-wrap">1314 <span class="stat -green">6%</span></span></li>
+              <li>widget <span class="stat-wrap">1189 <span class="stat -red">5%</span></span></li>
+              <li>find-opportunities <span class="stat-wrap">1151 <span class="stat -red">3%</span></span></li>
+              <li>veterans <span class="stat-wrap">1080 <span class="stat -green">6%</span></span></li>
+              <li>tools/federal-opportunities <span class="stat-wrap">792 <span class="stat -green">3%</span></span></li>
+              <li>healthcare <span class="stat-wrap">695 <span class="stat -green">6%</span></span></li>
+              <li>export <span class="stat-wrap">619 <span class="stat -red">2%</span></span></li>
+              <li>search/site <span class="stat-wrap">593 <span class="stat -green">3%</span></span></li>
+              <li>resource/grow-your-business <span class="stat-wrap">472 <span class="stat -red">1%</span></span></li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </aside>
+  </div>
+{% endblock %}

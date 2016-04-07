@@ -1,0 +1,30 @@
+
+// Goal Panel
+
+.goal-panel {
+  @include default-transition;
+  @include hidden-transition-content;
+  bottom: 0;
+  left: 80px;
+  padding-bottom: 56px;
+  position: absolute;
+  right: 80px;
+  top: 155px;
+  width: auto;
+
+  &.-active {
+    @include visible-transition-content;
+  }
+
+  .feature-section {
+    padding-top: 0;
+
+    h3 {
+      margin: 0;
+
+      span {
+        color: $blue;
+      }
+    }
+  }
+}

@@ -1,0 +1,39 @@
+.tag {
+  border-radius: 2px;
+  color: #fff;
+  display: inline-block;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 12px;
+  padding: 6px 10px 6px;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  top: -1px;
+
+  &.-fixed-width {
+    width: 104px;
+  }
+
+  &.-small {
+    font-size: 9px;
+    line-height: 9px;
+    padding: 7px 8px 6px;
+  }
+
+  &.-at-risk {
+    background: $tag-at-risk;
+  }
+
+  &.-on-track {
+    background: $tag-on-track;
+  }
+
+  &.-completed {
+    background: $tag-completed;
+  }
+
+  &.-over-budget {
+    background: $tag-over-budget;
+  }
+}

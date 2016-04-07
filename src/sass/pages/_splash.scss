@@ -1,0 +1,135 @@
+// Local Variables
+
+$splash-header-height : 130px;
+$splash-header-bg     : #2fa7d5;
+$splash-bg-color      : #dee6ea;
+
+// Styles
+
+.splash-container {
+  background: $splash-bg-color url("../images/splash/splash-background.jpg") 50% 50% no-repeat;
+  background-size: cover;
+  @include fill;
+}
+
+.splash-header {
+  background: $splash-header-bg;
+  height: $splash-header-height;
+
+  h1 {
+    margin: 0;
+    padding: 49px;
+    text-align: center;
+  }
+}
+
+.splash-content-wrapper {
+  @include wrap;
+  max-width: 1000px;
+}
+
+.splash-content {
+  @include span(6);
+  padding: 20px 28px 20px 100px;
+
+  h2 {
+    color: $black;
+    font-size: 36px;
+    padding-left: 12px;
+    line-height: 1.15;
+    margin-bottom: 38px;
+  }
+
+  ul {
+    @include list;
+    padding-bottom: 46px;
+
+    > li {
+      background-position: 0 0;
+      background-repeat: no-repeat;
+      font-size: 19px;
+      padding: 2px 32px 55px 86px;
+      vertical-align: top;
+
+      &.item-donut {
+        background-image: url("../images/splash/bullet-donut.png");
+      }
+
+      &.item-lines {
+        background-image: url("../images/splash/bullet-lines.png");
+      }
+
+      &.item-uptime {
+        background-image: url("../images/splash/bullet-uptime.png");
+        background-position-x: 7px;
+        padding-bottom: 0;
+      }
+    }
+  }
+}
+
+.splash-button {
+  background: $dark-greek;
+  border-radius: 3px;
+  color: #fff;
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+
+  &:hover span {
+    background: $light-green;
+    transform: translateX(-2px) translateY(-2px);
+  }
+}
+
+.splash-button-text {
+  @include default-transition;
+  border-radius: 3px;
+  background: $green;
+  display: block;
+  padding: 14px 22px 14px 18px;
+
+  i {
+    position: relative;
+
+    &:before {
+      @include pseudo;
+      background: url("../images/splash/button-arrow.png") 0 0 no-repeat;
+      height: 14px;
+      right: -18px;
+      top: 4px;
+      width: 9px;
+    }
+  }
+}
+
+.splash-copyright {
+  font-size: 12px;
+  padding: 22px;
+  text-align: center;
+}
+
+.splash-screenshots {
+  @include span(6);
+  padding-left: 10px;
+
+  img {
+    position: relative;
+  }
+
+  .top-screenshot {
+    top: -11px;
+    z-index: 2;
+  }
+
+  .bottom-screenshot {
+    top: -158px;
+    left: 17px;
+    z-index: 1;
+  }
+}
+

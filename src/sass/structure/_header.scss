@@ -1,0 +1,62 @@
+// Page Header
+
+.app-header {
+  @include row-wrap;
+  background: $black;
+  height: 60px;
+}
+
+.app-name {
+  float: left;
+  padding-top: 10px;
+  width: 50%;
+
+  h1 {
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 800;
+    text-transform: uppercase;
+
+    a {
+      color: #fff;
+    }
+  }
+}
+
+.app-project-selector {
+  @include dropdown($app-selector-background);
+  width: 210px;
+
+  &:hover {
+    background: $grey;
+  }
+
+  i {
+    top: 11px;
+  }
+}
+
+.app-settings-bar {
+  color: #fff;
+  float: right;
+  padding: 13px 44px 0 0;
+  text-align: right;
+  width: 50%;
+
+  strong {
+    font-weight: bold;
+    font-size: 15px;
+  }
+
+  .sign-out-link {
+    @include small-heading($grey);
+    display: block;
+    margin-top: 2px;
+  }
+
+  .profile {
+    position: absolute;
+    top: 11px;
+    right: 20px;
+  }
+}

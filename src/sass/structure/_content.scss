@@ -1,0 +1,66 @@
+.app-content {
+  @include fill;
+  top: 190px;
+
+  .-minimal & {
+    top: 151px;
+  }
+}
+
+.app-content-header {
+  @include row-wrap;
+  background: $blue;
+  height: 130px;
+
+  .-minimal & {
+    height: auto;
+    padding-bottom: 20px;
+  }
+
+  h2 {
+    @include sans-serif;
+    color: #fff;
+    font-size: 42px;
+    font-weight: normal;
+    margin: 18px 0 0;
+    text-transform: uppercase;
+  }
+}
+
+.app-module-selector {
+  position: absolute;
+  right: 20px;
+  top: 29px;
+
+  .module-selector-nav {
+    @include inline-list;
+
+    > li {
+      margin-left: 6px;
+
+      a {
+        @include button;
+        background-color: transparent;
+        background-repeat: no-repeat;
+        display: block;
+        font-size: 15px;
+        padding: 8px 18px;
+        text-transform: none;
+
+        svg {
+          margin-right: 8px;
+        }
+      }
+
+      &.-active a,
+      &:hover a {
+        color: $blue;
+        background-color: #fff;
+
+        svg {
+          fill: $blue;
+        }
+      }
+    }
+  }
+}

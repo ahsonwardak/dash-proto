@@ -1,0 +1,10 @@
+<li>
+  <div class="sub-feature-progress -inactive" style="width:{{ obj.perc }}%;"></div>
+  <a href="#"{% if obj.active %} class="-enabled"{% endif %}>
+    <h4>
+      {{ obj.name }}
+      <span class="tag -{{ obj.tag_slug }} -small">{{ obj.tag_name }}</span>
+    </h4>
+    <div class="budget-actual">${{ obj.spent }} / ${{ obj.budget }}</div>
+  </a>
+</li>

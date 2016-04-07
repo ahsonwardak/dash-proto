@@ -1,0 +1,139 @@
+.timeline {
+  @include row;
+  margin: 10px 0 0;
+  padding: 0;
+
+  .-minimal & {
+    display: none;
+  }
+}
+
+.release-year-content {
+  position: relative;
+  overflow: hidden;
+  padding-left: 6px;
+}
+
+.release-year {
+  @include default-transition;
+  @include span(1);
+  color: $grey-blue-light;
+  height: 32px;
+  line-height: 32px;
+  list-style: none;
+  margin: 0;
+  position: relative;
+
+  &:hover {
+    .release-year-content > a {
+      color: #fff;
+    }
+  }
+
+  &:after {
+    @include pseudo;
+    background: $scale-border;
+    bottom: 0;
+    height: 2px;
+    left: 0;
+    top: auto;
+    width: 100%;
+  }
+
+  &:before {
+    @include pseudo;
+    border-radius: 50%;
+    background: #fff;
+    top: auto;
+    bottom: -2px;
+    height: 6px;
+    left: -3px;
+    width: 6px;
+    z-index: 4;
+  }
+
+  &.-active:hover {
+    .release-features {
+      transform: translateY(0);
+    }
+
+    .release-year-link {
+      transform: translateY(30px);
+    }
+  }
+
+  &.-active {
+    @include span(8);
+
+    strong {
+      display: none;
+    }
+  }
+}
+
+.release-year-link {
+  @include default-transition;
+  color: $timeline-color;
+  display: block;
+  font-size: 12px;
+  font-weight: 800;
+  position: relative;
+}
+
+.release-features {
+  @include default-transition;
+  @include inline-list;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transform: translateY(30px);
+  width: 100%;
+
+  > li {
+    font-family: Georgia, sans-serif;
+    font-size: 12px;
+    font-style: italic;
+    font-weight: normal;
+    position: relative;
+    width: (100%/14);
+
+    .release-year.-active &:after,
+    .release-year.-active &:before {
+      @include pseudo;
+      background: $blue;
+      height: 36px;
+      left: auto;
+      right: 0;
+      width: 1px;
+    }
+
+    &:before {
+      left: 0;
+    }
+
+    &.-active a {
+      background: $scale-past;
+      color: #fff;
+    }
+
+    a {
+      background: $scale-default;
+      color: #4F9DC4;
+      display: block;
+      height: 30px;
+      line-height: 30px;
+      font-weight: 800;
+      text-align: center;
+
+      &:hover {
+        background: $scale-hover;
+        color: #fff;
+      }
+
+      &.-highlight {
+        background: $scale-hover;
+        color: #fff;
+      }
+    }
+  }
+}

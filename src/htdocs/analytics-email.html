@@ -1,0 +1,168 @@
+{% extends '_layouts/base.html' %}
+
+{% set container_class = '-minimal' %}
+
+{% set module = 'analytics' %}
+
+{% block content %}
+  <div class="app-content -show-features" role="main">
+    <article class="feature">
+      <header class="feature-header -big-toolbar">
+        <h3>
+          <span>(June 2014 – To Date)</span>
+          Email Analytics
+        </h3>
+        {% include '_shared/analytics-header.html' with {link: 'email'} %}
+      </header>
+      <section class="feature-section -email-feature -active" id="monthly-overview">
+        <div class="row">
+          <div class="email-left-highlight">
+            <h4>Sources</h4>
+            <ul class="email-sources-list">
+              <li>Newsletter<span class="stat -green">3%</span></li>
+              <li>Marketing Email<span class="stat -red">5%</span></li>
+              <li>Promotion<span class="stat -green">4%</span></li>
+              <li>Welcome Email<span class="stat -green">6%</span></li>
+              <li>Educational Email<span class="stat -red">3%</span></li>
+            </ul>
+          </div>
+          <div class="email-right-highlight">
+            <h4>Email Rate</h4>
+            <div class="email-rate-stat">
+              <span class="num">10</span>
+              <span class="rate">Per Week</span>
+              <span class="stat -green">10%</span>
+              <div class="rate-img">
+                <img src="./assets/images/charts/analytics-bounce-rate.png">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="feature-section -email-feature" id="september-newsletter">
+        <header class="email-feature-header">
+          <h3>September Newsletter</h3> <span class="accent-text">(sent 9/3/14)</span>
+        </header>
+        <ul class="feature-overview-stats -inline-auto">
+          <li>
+            <div class="email-feature-content">
+              <h4>Subscribers</h4>
+              <strong>10,000</strong> <span class="stat -green">10%</span>
+              <div class="graph-img email-info">
+                <img src="./assets/images/charts/analytics-bounce-rate.png">
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="email-feature-content">
+              <h4>Open Rate</h4>
+              <strong>90%</strong> <span class="stat -red">5%</span>
+              <div class="graph-img email-info">
+                <img src="./assets/images/charts/analytics-bounce-rate.png">
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="email-feature-content">
+              <h4>Click-Through</h4>
+              <strong>45%</strong> <span class="stat -green">5%</span>
+              <div class="graph-img email-info">
+                <img src="./assets/images/charts/analytics-bounce-rate.png">
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="email-feature-content">
+              <h4>Unsubscribed</h4>
+              <strong>5%</strong> <span class="stat -green">3%</span>
+              <div class="graph-img email-info">
+                <img src="./assets/images/charts/analytics-bounce-rate.png">
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="email-feature-content">
+              <h4>Bounced Emails</h4>
+              <strong>1.6%</strong> <span class="stat -red">5%</span>
+              <div class="graph-img email-info">
+                <img src="./assets/images/charts/analytics-bounce-rate.png">
+              </div>
+            </div>
+          </li>
+        </ul>
+      </section>
+      <section class="feature-section -email-feature" id="marketing-email">
+        <header class="email-feature-header">
+          <h3>Marketing Email</h3> <span class="accent-text">(sent 9/5/14)</span>
+        </header>
+        <ul class="feature-overview-stats -inline-auto">
+          <li>
+            <div class="email-feature-content">
+              <h4>Subscribers</h4>
+              <strong>8,500</strong> <span class="stat -green">6%</span>
+              <div class="graph-img email-info">
+                <img src="./assets/images/charts/analytics-bounce-rate.png">
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="email-feature-content">
+              <h4>Open Rate</h4>
+              <strong>92%</strong> <span class="stat -green">1%</span>
+              <div class="graph-img email-info">
+                <img src="./assets/images/charts/analytics-bounce-rate.png">
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="email-feature-content">
+              <h4>Click-Through</h4>
+              <strong>57%</strong> <span class="stat -green">14%</span>
+              <div class="graph-img email-info">
+                <img src="./assets/images/charts/analytics-bounce-rate.png">
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="email-feature-content">
+              <h4>Unsubscribed</h4>
+              <strong>8%</strong> <span class="stat -red">2%</span>
+              <div class="graph-img email-info">
+                <img src="./assets/images/charts/analytics-bounce-rate.png">
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="email-feature-content">
+              <h4>Bounced Emails</h4>
+              <strong>1.4%</strong> <span class="stat -green">1.1%</span>
+              <div class="graph-img email-info">
+                <img src="./assets/images/charts/analytics-bounce-rate.png">
+              </div>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </article>
+    <aside class="app-sidebar -dark -email">
+      <h4>
+        <a href="#monthly-overview" class="-enabled">
+          <i class="arrow -left"></i> Monthly Overview
+        </a>
+      </h4>
+      <ol class="email-sidebar-list">
+        <li><a href="#september-newsletter" class="-enabled">September Newsletter</a></li>
+        <li><a href="#marketing-email" class="-enabled">Marketing Email</a></li>
+        <li><a href="#">Promotion</a></li>
+        <li><a href="#">Welcome Email</a></li>
+        <li><a href="#">Education Email</a></li>
+        <li><a href="#">Educational Email</a></li>
+        <li><a href="#">Order Status Email</a></li>
+        <li><a href="#">Sales Announcement</a></li>
+        <li><a href="#">Event Email</a></li>
+        <li><a href="#">Anniversary Email</a></li>
+        <li><a href="#">Reorder Email</a></li>
+      </ol>
+    </aside>
+  </div>
+{% endblock %}

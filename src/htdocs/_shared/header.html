@@ -1,0 +1,54 @@
+<header class="app-header">
+  <div class="app-name">
+    <h1><a href="./index.html">GOV.Analytics</a></h1>
+    <a href="#" class="app-project-selector">Business.usa.gov <i class="arrow -down"></i></a>
+  </div>
+  <div class="app-settings-bar">
+    <strong>Administrator</strong>
+    <a href="#" class="sign-out-link">Sign Out</a>
+    <figure class="profile">
+      <img src="./assets/images/profiles/admin.png" alt="Administrator photo">
+    </figure>
+  </div>
+</header>
+<div class="app-content-header">
+  <h2>Business.usa.gov</h2>
+  {% include "timeline.html" %}
+  <div class="app-module-selector">
+    <ul class="module-selector-nav">
+      <li class="item-overview{% if module == 'overview' %} -active{% endif %}">
+        <a href="./dashboard-overview.html">
+          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" fill="#fff" width="18.006px" height="10.996px" viewBox="0 0 18.006 10.996" enable-background="new 0 0 18.006 10.996" xml:space="preserve">
+            <path d="M9.012,0C3.598,0,0,5.379,0,5.379v0.203c0,0,3.58,5.413,8.994,5.413s9.012-5.379,9.012-5.379V5.413 C18.006,5.413,14.425,0,9.012,0z M8.978,8.863c-1.832,0-3.317-1.475-3.317-3.293s1.485-3.293,3.317-3.293s3.316,1.475,3.316,3.293 S10.81,8.863,8.978,8.863z M8.978,4.042c-0.839,0-1.519,0.675-1.519,1.507s0.68,1.507,1.519,1.507 c0.838,0,1.519-0.675,1.519-1.507S9.815,4.042,8.978,4.042z">
+          </svg>
+          Overview
+        </a>
+      </li>
+      <li class="item-project-health{% if module == 'project-health' %} -active{% endif %}">
+        <a href="./project-health.html">
+          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" fill="#fff" width="10px" height="9px" viewBox="0 0 10 9" enable-background="new 0 0 10 9" xml:space="preserve">
+            <path d="M7.512,0C6.238,0,5,1.571,5,1.571S3.762,0,2.488,0S0,0.655,0,2.583c0,1.369,1.25,2.572,1.25,2.572L5,9l3.75-3.845 c0,0,1.25-1.203,1.25-2.572C10,0.655,8.785,0,7.512,0z">
+          </svg>
+          Project Health
+        </a>
+      </li>
+      <li class="item-analytics{% if module == 'analytics' %} -active{% endif %}">
+        <a href="./analytics-sessions.html">
+          <?xml version="1.0" encoding="utf-8"?>
+          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" fill="#fff" width="20.009px" height="14.001px" viewBox="0 0 20.009 14.001" enable-background="new 0 0 20.009 14.001" xml:space="preserve">
+            <path d="M0.44,10.981c0.511,0.418,1.263,0.34,1.678-0.176v-0.002l1.216-1.511l1.936,2.646c0.257,0.352,0.685,0.535,1.115,0.478 c0.43-0.056,0.795-0.346,0.953-0.754l1.841-4.739l2.667,6.343c0.187,0.448,0.619,0.734,1.098,0.734c0.021,0,0.044,0,0.066-0.002 c0.503-0.029,0.932-0.372,1.075-0.859l2.54-8.626l1.119,2.323c0.287,0.598,1.001,0.847,1.594,0.555 c0.592-0.29,0.839-1.012,0.551-1.609l-2.46-5.105c-0.216-0.448-0.68-0.714-1.17-0.673c-0.492,0.041-0.905,0.379-1.046,0.856 l-2.47,8.384l-2.512-5.977c-0.189-0.452-0.628-0.741-1.114-0.734C8.632,2.54,8.201,2.841,8.023,3.298L5.905,8.757L4.337,6.612 c-0.221-0.3-0.562-0.479-0.932-0.488C3.034,6.115,2.685,6.278,2.452,6.569L0.267,9.287C-0.148,9.804-0.07,10.562,0.44,10.981z">
+          </svg>
+          Digital Analytics
+        </a>
+      </li>
+      <li class="item-systems{% if module == 'systems' %} -active{% endif %}">
+        <a href="./systems.html">
+          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" fill="#fff" width="16px" height="15.999px" viewBox="0 0 16 15.999" enable-background="new 0 0 16 15.999" xml:space="preserve">
+              <path d="M14.996,4.641L11.734,0H4.266L1.004,4.641H0v3.158h16V4.641H14.996z M1.703,6.867H0.972v-1.27h0.731V6.867z M3.028,6.867 H2.297v-1.27h0.731V6.867z M4.354,6.867H3.622v-1.27h0.731V6.867z M15.021,6.632h-4.716V5.81h4.716V6.632z M0,11.898h16V8.74H0 V11.898z M10.305,9.91h4.716v0.822h-4.716V9.91z M3.622,9.696h0.731v1.271H3.622V9.696z M2.297,9.696h0.731v1.271H2.297V9.696z  M0.972,9.696h0.731v1.271H0.972V9.696z M0,15.999h16v-3.158H0V15.999z M10.305,14.01h4.716v0.823h-4.716V14.01z M3.622,13.796 h0.731v1.271H3.622V13.796z M2.297,13.796h0.731v1.271H2.297V13.796z M0.972,13.796h0.731v1.271H0.972V13.796z">
+          </svg>
+          Systems
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>

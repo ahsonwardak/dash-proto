@@ -1,0 +1,39 @@
+// Site Containers
+
+.app-container {
+  @include fill;
+  min-width: $page-min-width;
+  transform: translate3d(0,0,0);
+}
+
+.home-container {
+  font-size: 20px;
+  padding: 50px;
+  text-align: center;
+
+  ul {
+    @include list;
+    margin: 0 auto;
+    width: 400px;
+
+    > li {
+      position: relative;
+      border-bottom: 2px solid $base-background;
+
+      a {
+        @include default-transition;
+        border-radius: 2px;
+        background: $black;
+        color: #fff;
+        display: block;
+        font-size: 22px;
+        font-weight: bold;
+        padding: 1em;
+
+        &:hover {
+          background: $dark-grey;
+        }
+      }
+    }
+  }
+}

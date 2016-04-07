@@ -1,0 +1,52 @@
+html,
+body {
+  background: $base-background;
+  font-size: $base-font-size;
+  min-height: 100%;
+}
+
+body {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  color: $base-font-color;
+  @include sans;
+  font-size: 14px;
+  font-weight: 400;
+  height: 100%;
+  line-height: $base-line-height;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+
+  * {
+    box-sizing: border-box;
+  }
+}
+
+// Normalize Overrides
+
+a {
+  @include default-transition;
+  text-decoration: none;
+}
+
+p {
+  margin: 0;
+
+  & + & {
+    margin-top: 1em;
+  }
+
+  a {
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+a:focus,
+input:focus,
+button:focus {
+  outline: none;
+}

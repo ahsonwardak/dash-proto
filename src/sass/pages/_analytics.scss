@@ -1,0 +1,56 @@
+
+.total-sessions-info {
+  position: relative;
+
+  img {
+    display: block;
+    position: relative;
+    top: -3px;
+  }
+
+  .extra-info {
+    @include list;
+    font-weight: bold;
+    margin: 10px 0 0 50px;
+
+    strong {
+      @include sans;
+      @include small-heading;
+      display: inline;
+    }
+  }
+}
+
+#analytics-map {
+  background: url("../images/charts/analytics-map.png") 100% 0 no-repeat;
+  background-size: contain;
+  height: 590px;
+  position: absolute;
+  right: 40%;
+  width: 100%;
+}
+
+#analytics-overview-feature-graph {
+  @include row;
+  margin-bottom: 30px;
+
+  .c3-tooltip th:before {
+    content: "Week of";
+    padding-right: 4px;
+    text-transform: none;
+  }
+
+  // Custom
+
+  .c3-region {
+    @include default-transition;
+    fill: $chart-background;
+    stroke: $base-background;
+    stroke-width: 1px;
+
+    rect {
+      fill-opacity: 1 !important;
+    }
+  }
+}
+

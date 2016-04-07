@@ -1,0 +1,298 @@
+
+
+// Dropdown
+
+@mixin dropdown($background-color: $blue) {
+  background: $background-color;
+  border-radius: 2px;
+  color: #fff;
+  display: inline-block;
+  font-size: 12px;
+  font-weight: bold;
+  margin-left: 20px;
+  padding: 6px 24px 6px 10px;
+  position: relative;
+  text-transform: uppercase;
+
+  i {
+    font-style: normal;
+    font-weight: normal;
+    position: absolute;
+    right: 20px;
+    top: 12px;
+  }
+}
+
+// Numbered List
+
+@mixin number-bulleted-list($box-size: 20px, $font-size: $base-font-size) {
+  counter-reset: item-counter;
+
+  > li {
+    position: relative;
+    padding-left: 30px;
+
+    &:before {
+      border-radius: 50%;
+      content: counter(item-counter);
+      counter-increment: item-counter;
+      font-size: $font-size;
+      font-weight: bold;
+      height: $box-size;
+      left: 0;
+      line-height: $box-size;
+      pointer-events: none;
+      position: absolute;
+      text-align: center;
+      top: 0;
+      width: $box-size ;
+    }
+  }
+}
+
+// Fonts (Sans and Sans-Serif)
+
+@mixin sans {
+  font-family: 'ProximaNova', 'Helvetica Nueue', Helvetica, Arial, sans-serif;
+}
+
+@mixin sans-serif {
+  font-family: 'Steelfish', sans-serif;
+}
+
+// Button
+
+@mixin button {
+  background-color: $button-background;
+  border-radius: 2px;
+  color: #fff;
+  @include default-transition;
+  @include clearfix;
+  display: inline-block;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 8px 12px 7px;
+  text-transform: uppercase;
+
+  &:hover {
+    background-color: $button-hover-background;
+  }
+
+  i {
+    color: #113952;
+    font-style: normal;
+    margin: 0 4px;
+  }
+}
+
+// Default Transition
+
+@mixin default-transition {
+  transition:
+    $default-transition-property
+    $default-transition-duration
+    $default-transition-delay
+    $default-transition-function;
+}
+
+
+// Grid Offset
+
+@mixin offset($cols) {
+  margin-left: offset($cols) !important;
+}
+
+// Font Face
+
+@mixin font-face($name, $filename, $style: normal, $weight: normal) {
+  @font-face {
+    font-family: "#{$name}";
+    font-style: $style;
+    font-weight: $weight;
+    src: url("#{$filename}.eot");
+    src: url("#{$filename}.eot?#iefix") format("embedded-opentype"),
+         url("#{$filename}.woff") format("woff"),
+         url("#{$filename}.ttf") format("truetype"),
+         url("#{$filename}.svg##{$name}") format('svg');
+  }
+}
+
+// Gutter Offset
+
+@mixin gutter($cols) {
+  margin-left: gutter($cols);
+}
+
+// Grid Span
+
+@mixin span($cols) {
+  float: left;
+  width: span($cols);
+  &:not(:first-child) {
+    float: left;
+  }
+}
+
+// Layout Helpers
+
+@mixin row {
+  @include clearfix;
+  float: left;
+  position: relative;
+  width: 100%;
+}
+
+@mixin row-wrap {
+  @include row;
+  padding: 0 30px;
+}
+
+// Placeholder Content
+
+@mixin placeholder {
+  &::-webkit-input-placeholder {
+    @content;
+  }
+  &:-moz-placeholder {
+    @content;
+  }
+  &:-ms-input-placeholder {
+    @content;
+  }
+  &:placeholder {
+    @content;
+  }
+}
+
+// Generated Pseudo Element
+
+@mixin pseudo {
+  content: "";
+  position: absolute;
+  top: 0;
+}
+
+// Fill
+
+@mixin fill($val: 0) {
+  bottom: #{$val};
+  left: #{$val};
+  position: absolute;
+  right: #{$val};
+  top: #{$val};
+}
+
+// Clear Row
+
+@mixin clearfix {
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+  .lte7 & {
+    zoom: 1;
+  }
+}
+
+// Layout Helpers
+
+@mixin wrap {
+  @include clearfix;
+  margin: 0 auto;
+  min-width: $page-min-width;
+  max-width: $page-max-width;
+  width: 100%;
+}
+
+// Transitioning Content
+
+@mixin hidden-transition-content {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+@mixin visible-transition-content {
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
+}
+
+// Hide Text
+
+@mixin hide-text {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+// Inline List
+
+@mixin list($clear: true) {
+  font-size: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  > li {
+    @if $clear {
+      @include clearfix;
+    }
+    display: block;
+    font-size: $base-font-size;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+// Inline List
+
+@mixin inline-list {
+  font-size: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  > li {
+    display: inline-block;
+    font-size: $base-font-size;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+// Reused Typographical Styles
+
+@mixin small-heading($color: $accent-color) {
+  color: $color;
+  display: block;
+  font-size: 11px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+@mixin big-value {
+  @include sans-serif;
+  color: $blue;
+  font-size: 56px;
+  font-weight: normal;
+  margin: 0;
+  padding: 0 0 26px;
+}
+
+@mixin accent-text {
+  color: $accent-color;
+  font-family: Georgia, sans-serif;
+  font-size: 12px;
+  font-style: italic;
+  font-weight: normal;
+}

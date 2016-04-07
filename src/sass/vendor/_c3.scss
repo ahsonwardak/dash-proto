@@ -1,0 +1,340 @@
+/*-- Chart --*/
+
+.c3 svg {
+  font: 10px sans-serif;
+}
+
+.c3 path, .c3 line {
+  fill: none;
+}
+
+.c3 text {
+  @include sans;
+  fill: $accent-color;
+  font-weight: bold;
+  font-size: 10px;
+  user-select: none;
+}
+
+.c3-legend-item-tile,
+.c3-xgrid-focus,
+.c3-ygrid,
+.c3-event-rect,
+.c3-bars path {
+  shape-rendering: crispEdges;
+}
+
+.c3-chart-arc path {
+}
+
+.c3-chart-arc text {
+  fill: #fff;
+  font-size: 13px;
+}
+
+/*-- Axis --*/
+
+.c3-axis-x .tick {
+  fill: green;
+}
+
+.c3-axis-x-label {
+  fill: blue;
+}
+
+.c3-axis-y .tick {
+  fill: orange;
+}
+
+.c3-axis-y-label {
+  fill: red;
+}
+
+.c3-axis-y2 .tick {
+  fill: red;
+}
+
+.c3-axis-y2-label {
+  fill: red;
+}
+
+/*-- Grid --*/
+
+.c3-grid line {
+  stroke: #aaa;
+}
+.c3-grid text {
+  fill: #aaa;
+}
+.c3-xgrid, .c3-ygrid {
+  stroke-dasharray: 3 3;
+}
+.c3-xgrid-focus {
+}
+
+/*-- Text on Chart --*/
+
+.c3-text {
+}
+
+.c3-text.c3-empty {
+  fill: #808080;
+  font-size: 2em;
+}
+
+/*-- Line --*/
+
+.c3-line {
+  stroke-width: 2px;
+}
+
+/*-- Point --*/
+
+.c3-circle._expanded_ {
+  stroke-width: 3px;
+  stroke: white;
+}
+.c3-selected-circle {
+  fill: white;
+  stroke-width: 1px;
+}
+
+/*-- Bar --*/
+
+.c3-bar {
+  stroke-width: 0;
+}
+
+.c3-bar._expanded_ {
+  fill-opacity: 0.75;
+}
+
+/*-- Arc --*/
+
+.c3-chart-arcs-title {
+  font-size: 1.3em;
+}
+
+/*-- Focus --*/
+
+.c3-target.c3-focused {
+  opacity: 1;
+}
+.c3-target.c3-focused path.c3-line, .c3-target.c3-focused path.c3-step {
+  stroke-width: 2px;
+}
+.c3-target.c3-defocused {
+  opacity: 0.3 !important;
+}
+
+
+/*-- Region --*/
+
+.c3-region {
+  fill: steelblue;
+  fill-opacity: .1;
+}
+
+/*-- Brush --*/
+
+.c3-brush .extent {
+  fill-opacity: .1;
+}
+
+/*-- Select - Drag --*/
+
+.c3-dragarea {
+}
+
+/*-- Legend --*/
+
+.c3-legend-item {
+  font-size: 12px;
+}
+
+.c3-legend-background {
+  opacity: 0.75;
+  fill: white;
+  stroke: lightgray;
+  stroke-width: 1;
+}
+
+/*-- Tooltip --*/
+
+.c3-tooltip {
+  @include sans;
+  border-collapse: collapse;
+  border-radius: 2px;
+  border-spacing: 0;
+  box-shadow: 0 0 4px rgba(#000, 0.15);
+  color: $black;
+  empty-cells: show;
+  font-weight: bold;
+  text-transform: capitalize;
+  overflow: hidden;
+}
+
+.c3-tooltip tr {
+}
+
+.c3-tooltip td {
+  background-color: #fff;
+  font-size: 14px;
+}
+
+.c3-tooltip th {
+  background-color: $scale-past;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 12px;
+  padding: 10px;
+  text-align: left;
+}
+
+.c3-tooltip td {
+  background-color: #fff;
+  font-size: 13px;
+  padding: 3px 6px;
+}
+
+.c3-tooltip td > span {
+  display: inline-block;
+  width: 30px;
+  height: 10px;
+  margin-right: 6px;
+}
+
+.c3-tooltip td.value{
+  text-align: right;
+}
+
+.c3-area {
+  stroke-width: 0;
+  opacity: 0.2;
+}
+
+.c3-chart-arcs .c3-chart-arcs-background {
+  fill: #e0e0e0;
+  stroke: none;
+}
+
+.c3-chart-arcs .c3-chart-arcs-gauge-unit {
+  fill: #000;
+  font-size: 16px;
+}
+
+.c3-chart-arcs .c3-chart-arcs-gauge-max {
+  fill: #777;
+}
+
+.c3-chart-arcs .c3-chart-arcs-gauge-min {
+  fill: #777;
+}
+
+.c3-chart-arc .c3-gauge-value {
+  fill: #000;
+  font-size: 28px;
+}
+
+// New Tooltip
+
+.new-tooltip-wrapper {
+  background: #fff;
+  border-radius: 2px;
+  box-shadow: 0 3px 0 0 $white-section-shadow;
+  overflow: hidden;
+
+  &.-sessions {
+    width: 200px;
+
+    h3 {
+      text-align: left;
+    }
+  }
+
+  &.-commits {
+    h3 {
+      font-size: 12px;
+    }
+  }
+
+  h3 {
+    background: $blue;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    margin: 0;
+    padding: 10px 18px;
+    text-align: center;
+
+    em {
+      font-family: Georgia;
+      margin-right: 8px;
+      position: relative;
+      top: -2px;
+    }
+  }
+
+  ul {
+    @include list;
+    text-align: center;
+  }
+}
+
+.new-tooltip-name {
+  @include small-heading;
+  color: $new-tooltip-heading;
+  line-height: 1;
+  margin-top: 8px;
+
+  .-sessions & {
+    font-size: 12px;
+  }
+
+  .-commits & {
+    font-size: 12px;
+  }
+}
+
+.new-tooltip-value {
+  @include big-value;
+  padding-bottom: 8px;
+  line-height: 1;
+
+  .-sessions &,
+  .-commits & {
+    font-size: 42px;
+  }
+}
+
+.new-tooltip-content {
+  padding: 10px 16px 8px;
+
+  h4 {
+    margin: 0;
+  }
+
+  > ul {
+    @include inline-list;
+
+    > li {
+      text-align: left;
+      width: 50%;
+
+      > ul {
+        @include inline-list;
+        text-align: left;
+
+        > li {
+          color: $new-tooltip-heading;
+          font-size: 12px;
+          font-weight: bold;
+
+          strong {
+            color: $blue;
+          }
+        }
+      }
+    }
+  }
+}

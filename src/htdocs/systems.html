@@ -1,0 +1,107 @@
+{% extends '_layouts/base.html' %}
+
+{% set container_class = '-minimal' %}
+
+{% set module = 'systems' %}
+
+{% block content %}
+  <div class="app-content -show-features" role="main">
+    <article class="feature">
+      <header class="feature-header">
+        <h3>
+          <span>(June 2014 – To Date)</span>
+          Performance
+        </h3>
+        {% include '_shared/systems-header.html' %}
+      </header>
+      <section class="feature-section">
+        <ul class="feature-overview-stats -inline-auto -quarters -plr-20">
+          <li>
+            <div class="feature-overview-stats-content">
+              <h4>Server Status</h4>
+              <span class="status -green">Online</span>
+            </div>
+          </li>
+          <li>
+            <div class="feature-overview-stats-content">
+              <h4>Uptime</h4>
+              <strong>90.1%</strong> <span class="tag -at-risk">At Risk</span>
+            </div>
+          </li>
+          <li>
+            <div class="feature-overview-stats-content">
+              <h4>Load Time (Seconds)</h4>
+              <strong>02:31</strong> <span class="tag -at-risk">At Risk</span>
+            </div>
+          </li>
+          <li>
+            <div class="feature-overview-stats-content">
+              <h4>Error Rate</h4>
+              <strong>3%</strong>
+            </div>
+          </li>
+        </ul>
+        <h4 class="small-heading -plr-20 -pt-20">CPU Usage</h4>
+        <div class="chart-wrapper">
+          <div class="chart-legend">
+            <div class="axis -y -short">
+              Percentage
+            </div>
+            <div class="axis -x">
+              Week of
+            </div>
+          </div>
+          <div id="systems-cpu-usage-chart"></div>
+        </div>
+      </section>
+    </article>
+    <aside class="app-sidebar -overflow">
+      <ul class="systems-sidebar-list">
+        <li>
+          <h3>Commits <em>(Current release)</em></h3>
+          <ul class="commit-info-list">
+            <li>
+              <span class="headline">Commits</span>
+              <span class="value">1261</span>
+            </li>
+            <li>
+              <span class="headline">Last Commit Date</span>
+              <span class="value">10/2/14</span>
+            </li>
+          </ul>
+          <div class="chart-wrapper">
+            <div class="chart-legend">
+              <div class="axis -x">
+                Week of
+              </div>
+            </div>
+            <div id="systems-commits-chart"></div>
+          </div>
+        </li>
+        <li class="-darker">
+          <h3>Tickets <em>(Current release)</em></h3>
+          <figure class="ticketing-figure has-tooltip">
+            <div class="tooltip -right">
+              <ul class="ticket-status-list">
+                <li>
+                  <span class="headline">High Priority</span>
+                  <span class="value -high">32</span>
+                </li>
+                <li>
+                  <span class="headline">Unattended</span>
+                  <span class="value -unattended">64</span>
+                </li>
+              </ul>
+            </div>
+            <img src="./assets/images/charts/systems-tickets.png" class="-default">
+            <img src="./assets/images/charts/systems-tickets-hover.png" class="-hover">
+          </figure>
+          <ul class="ticketing-status-list">
+            <li class="-open">Open <strong>298</strong></li>
+            <li class="-closed">Closed <strong>323</strong></li>
+          </ul>
+        </li>
+      </ul>
+    </aside>
+  </div>
+{% endblock %}

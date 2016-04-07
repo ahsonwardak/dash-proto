@@ -1,0 +1,23 @@
+
+// Funnel stuff
+
+.funnel-tags {
+  @include list;
+
+  > li {
+    position: absolute;
+    right: 19px;
+    top: 0;
+    width: 20px;
+    z-index: 2;
+
+    &.-red {
+      background: $red;
+      border-top-right-radius: 2px;
+    }
+
+    &.-green {
+      background: $green;
+    }
+  }
+}

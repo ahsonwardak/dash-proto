@@ -1,0 +1,31 @@
+
+// Scrollbar
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-button {
+
+}
+
+::-webkit-scrollbar-track {
+
+}
+
+::-webkit-scrollbar-track-piece {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba($black, 0.2);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-corner {
+
+}
+
+::-webkit-resizer {
+
+}

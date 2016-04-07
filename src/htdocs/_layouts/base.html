@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Gov.Analytics | Business.USA.gov</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="./favicon.ico">
+    <link rel="stylesheet" href="./assets/css/app.css?2.2.0">
+  </head>
+  <body>
+    <div class="app-container{% if container_class %} {{ container_class }}{% endif %}">
+      {% include "../_shared/header.html" %}
+
+      {% block content %}{% endblock %}
+    </div>
+
+    <script src="./assets/js/app.js?2.2.0"></script>
+  </body>
+</html>

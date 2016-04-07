@@ -1,0 +1,39 @@
+#systems-cpu-usage-chart {
+  @include row;
+  margin: 0 0 30px;
+
+  .new-tooltip-wrapper {
+    li:nth-child(2) {
+      display: none;
+    }
+  }
+
+  // Custom
+
+  .c3-region {
+    @include default-transition;
+    fill: $chart-background;
+    stroke: $base-background;
+    stroke-width: 1px;
+
+    rect {
+      fill-opacity: 1 !important;
+    }
+  }
+}
+
+#systems-commits-chart {
+  @include row;
+  margin: 30px 0;
+
+  // Custom
+
+  .c3-region {
+    fill: #000;
+    stroke-width: 1px;
+
+    rect {
+      fill-opacity: 1 !important;
+    }
+  }
+}

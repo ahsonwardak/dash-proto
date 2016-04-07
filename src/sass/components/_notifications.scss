@@ -1,0 +1,31 @@
+
+.notifications {
+  background: #fff;
+  border-radius: 2px;
+  box-shadow: 0 2px 0 0 $white-section-shadow;
+  float: right;
+  margin: 40px 0;
+  padding-bottom: 20px;
+  width: 100%;
+
+  &.-at-risk {
+    h3 {
+      background: $orange;
+      text-transform: none;
+    }
+  }
+
+  h3 {
+    color: #fff;
+    font-size: 18px;
+    margin: 0 0 20px;
+    padding: 14px 30px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  p {
+    font-size: 16px;
+    padding: 20px 30px;
+  }
+}

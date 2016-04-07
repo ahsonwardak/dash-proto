@@ -1,0 +1,75 @@
+
+// Local Mixins
+
+@mixin email-highlight {
+  background-color: $side-stat-background;
+  box-shadow: 0 3px 0 0 $white-section-shadow;
+  margin-top: 20px;
+  padding: 30px;
+  float: left;
+
+  h4 {
+    font-size: 24px;
+    margin-top: 0;
+  }
+}
+
+// Base Styles
+
+.email-left-highlight {
+  @include email-highlight;
+  width: 60%;
+}
+
+.email-right-highlight {
+  @include email-highlight;
+  width: 38%;
+  float: right;
+
+  .email-rate-stat {
+    float: left;
+    line-height: 1;
+    position: relative;
+    width: 100%;
+
+    .rate-img {
+      position: absolute;
+      bottom: 0;
+      left: 120px;
+      width: 100%;
+    }
+
+    .num {
+      @include sans-serif;
+      color: $blue;
+      float: left;
+      font-size: 56px;
+    }
+
+    .rate {
+      color: $dark-blue;
+      font-size: 12px;
+      font-weight: bold;
+      left: 40px;
+      position: absolute;
+      right: 0;
+      text-align: center;
+      text-transform: uppercase;
+      top: 6px;
+      width: 66px;
+    }
+
+    .stat {
+      bottom: 4px;
+      left: 40px;
+      position: absolute;
+      right: 0;
+      text-align: center;
+      width: 66px;
+
+      &:before {
+        left: 12px;
+      }
+    }
+  }
+}

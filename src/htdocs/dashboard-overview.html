@@ -1,0 +1,133 @@
+{% extends '_layouts/base.html' %}
+
+{% set container_class = '-minimal -full-screen' %}
+
+{% set module = 'overview' %}
+
+{% block content %}
+  <div class="app-content -show-features" role="main">
+    <article class="feature">
+      <header class="feature-header -inline-accent">
+        <h2>
+          Release 3.2
+          <span>(June 2014 – To Date)</span>
+        </h2>
+      </header>
+      <section class="feature-section -no-bottom-border">
+        <div class="overview-left-col">
+          <h3>
+            Project Health
+            <span>(Day 43/128)</span>
+          </h3>
+          <a href="./project-health.html" class="button">View Project Data <i class="arrow -right"></i></a>
+          <ul class="feature-overview-stats">
+            <li>
+              <h4>Spent</h4>
+              <strong>$155,000</strong>
+            </li>
+            <li>
+              <h4>Remaining</h4>
+              <strong>$10,000</strong>
+            </li>
+            <li>
+              <h4>Estimated</h4>
+              <strong>$165,000</strong>
+            </li>
+          </ul>
+          <div class="pie-chart" id="dashboard-overview-pie-chart">
+            <div class="pie-chart-callout">
+              <strong>93.9%</strong>
+              complete
+            </div>
+          </div>
+        </div>
+        <div class="overview-right-col">
+          <div class="notifications -at-risk">
+            <h3>At Risk</h3>
+            <ul class="notifications-list">
+              <li class="has-tooltip">
+                <a href="./systems.html">
+                  <span class="tag -at-risk -fixed-width">At Risk</span>CPU usage approaching 90%
+                  <div class="tooltip">
+                    CPU usage is significantly higher than recommended<br>
+                    benchmark. DevOps team should be contacted immediately<br>
+                    for troubleshooting.
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span class="tag -at-risk -fixed-width">At Risk</span>Average load time approaching 3:00 seconds
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span class="tag -over-budget -fixed-width">Over Budget</span>Wizard Integration projected to go over budget by 9%
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span class="tag -over-budget -fixed-width">Over Budget</span>Release 3.2 projected to go over budget by 12%
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <aside class="overview-footer">
+        <div class="systems-col">
+          <div class="overview-footer-header">
+            <a href="./systems.html">
+              <h3>Systems</h3>
+              <span class="accent">View Systems Data <i class="arrow -right"></i></span>
+            </a>
+          </div>
+          <div class="overview-col-content">
+            <ul class="overview-stat-info">
+              <li>
+                <h4>Server Status</h4>
+                <span class="status -green">Online</span>
+              </li>
+              <li>
+                <h4>Uptime</h4>
+                <strong>90.1%</strong> <span class="tag -at-risk">At Risk</span>
+              </li>
+              <li>
+                <h4>Load Time (Seconds)</h4>
+                <strong>02:31</strong> <span class="tag -at-risk">At Risk</span>
+              </li>
+              <li>
+                <h4>Last Commit</h4>
+                <strong>10/01/14</strong>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="analytics-col">
+          <div class="overview-footer-header">
+            <a href="./analytics-sessions.html">
+              <h3>Digital Analytics</h3>
+              <span class="accent">View Analytics Data <i class="arrow -right"></i></span>
+            </a>
+          </div>
+          <div class="overview-col-content">
+            <ul class="overview-stat-info">
+              <li class="graph-item">
+                <h4>Sessions to Date (Thousands)</h4>
+                <div id="dashboard-sessions-graph"></div>
+              </li>
+              <li>
+                <h4>Total Sessions</h4>
+                <strong>320,000</strong> <span class="stat -green">10%</span>
+              </li>
+              <li>
+                <h4>Avg. Time on Site (minutes)</h4>
+                <strong>03:18</strong> <span class="stat -red">5%</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </aside>
+    </article>
+  </div>
+{% endblock %}

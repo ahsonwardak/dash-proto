@@ -1,0 +1,136 @@
+
+.dashboard-col {
+  @include span(6);
+}
+
+.systems-col {
+  @extend .overview-col;
+  margin-right: 1%;
+}
+
+.analytics-col {
+  @extend .overview-col;
+  margin-left: 1%;
+}
+
+.overview-left-col {
+  float: left;
+  padding-left: 30px;
+  position: relative;
+  width: 62%;
+
+  h3 {
+    font-size: 24px;
+    margin: 10px 0;
+
+    span {
+      @include accent-text;
+      font-size: 14px;
+      display: inline-block;
+    }
+  }
+
+  .button {
+    @include button;
+    background-color: $blue;
+    margin-bottom: 20px;
+    padding-right: 30px;
+    position: relative;
+
+    &:hover {
+      background-color: $light-blue;
+    }
+
+    i {
+      position: absolute;
+      right: 14px;
+      top: 10px;
+    }
+  }
+
+  .feature-overview-stats {
+    > li {
+      margin: 20px 0;
+    }
+  }
+
+  .pie-chart {
+    right: 50px;
+  }
+}
+
+.overview-right-col {
+  float: left;
+  padding-right: 30px;
+  width: 38%;
+}
+
+.overview-footer {
+  @include row;
+
+  .stat,
+  .tag {
+    bottom: 0;
+    margin-left: 6px;
+    position: relative;
+    top: -8px;
+  }
+}
+
+.overview-col {
+  background: $black;
+  float: left;
+  position: relative;
+  width: 49%;
+}
+
+.overview-col-content {
+  padding: 10px 30px 30px;
+}
+
+.overview-footer-header {
+  @include default-transition;
+  background: $blue;
+  height: 54px;
+  line-height: 54px;
+
+  &:hover {
+    background: $light-blue;
+  }
+
+  a {
+    display: block;
+    padding: 0 30px;
+  }
+
+  h3 {
+    color: #fff;
+    margin: 0;
+    font-size: 20px;
+  }
+
+  .accent {
+    color: #fff;
+    font-size: 11px;
+    font-weight: bold;
+    position: absolute;
+    right: 30px;
+    padding-right: 12px;
+    text-transform: uppercase;
+    top: 0;
+
+    i {
+      position: absolute;
+      right: 0px;
+      top: 21px;
+    }
+  }
+}
+
+#dashboard-sessions-graph {
+  left: -50px;
+  position: absolute;
+  top: 0;
+  width: 120%;
+}
+

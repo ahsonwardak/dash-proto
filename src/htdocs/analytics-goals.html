@@ -1,0 +1,297 @@
+{% extends '_layouts/base.html' %}
+
+{% set container_class = '-minimal' %}
+
+{% set module = 'analytics' %}
+
+{% block content %}
+  <div class="app-content -show-features" role="main">
+    <article class="feature">
+      <header class="feature-header -big-toolbar">
+        <h3>
+          <span>(June 2014 – To Date)</span>
+          Goal Analytics
+        </h3>
+        {% include '_shared/analytics-header.html' with {link: 'goals'} %}
+      </header>
+      <div class="goal-panel -active" id="goal-1">
+        <section class="feature-section -half -flow">
+          <h3 class="-plr-20">
+            <span>Goal 1</span>
+            Complete Registration Flow
+          </h3>
+          <ul class="feature-overview-stats">
+            <li class="-plr-20">
+              <h4>Funnel Participants</h4>
+              <strong>10,000</strong>
+            </li>
+            <li class="-plr-20">
+              <h4>Funnel Completion Rate</h4>
+              <strong>12%</strong>
+            </li>
+            <li class="-plr-20">
+              <div class="side-by-side-stat">
+                <h4>Avg. Time (minutes)</h4>
+                <strong>02:33</strong>
+              </div>
+              <div class="side-by-side-stat">
+                <h4>Under 2:00 Minutes</h4>
+                <strong>75%</strong>
+              </div>
+            </li>
+          </ul>
+        </section>
+        <section class="feature-section -half -flow -scroller">
+          <h3 class="-funnel-header">
+            <em>10,000</em>
+            Funnel Participants
+          </h3>
+          <ol class="funnel-list">
+            <li>
+              <h4>
+                <span>Step 1</span>
+                Registration Agreement
+              </h4>
+              <div class="perc-arrow">
+                <em>3200</em>
+                (32%)
+              </div>
+              <ul class="funnel-tags">
+                <li class="-red" style="height: 50px;"></li>
+                <li class="-green" style="top: 50px; height: 27px;"></li>
+              </ul>
+            </li>
+            <li>
+              <h4>
+                <span>Step 2</span>
+                Registration Description
+              </h4>
+              <div class="perc-arrow">
+                <em>1600</em>
+                (50%)
+              </div>
+              <ul class="funnel-tags">
+                <li class="-red" style="height: 38px;"></li>
+                <li class="-green" style="top: 38px; height: 39px;"></li>
+              </ul>
+            </li>
+            <li>
+              <h4>
+                <span>Step 3</span>
+                Registration Form
+              </h4>
+              <div class="perc-arrow">
+                <em>1320</em>
+                (83%)
+              </div>
+              <ul class="funnel-tags">
+                <li class="-red" style="height: 19px;"></li>
+                <li class="-green" style="top: 19px; height: 58px;"></li>
+              </ul>
+            </li>
+            <li>
+              <h4>
+                <span>Step 4</span>
+                Confirmation Email
+              </h4>
+              <div class="perc-arrow">
+                <em>1200</em>
+                (91%)
+              </div>
+              <ul class="funnel-tags">
+                <li class="-red" style="height: 8px;"></li>
+                <li class="-green" style="top: 8px; height: 69px;"></li>
+              </ul>
+            </li>
+          </ol>
+        </section>
+      </div>
+      <div class="goal-panel" id="goal-2">
+        <section class="feature-section -half -flow">
+          <h3 class="-plr-20">
+            <span>Goal 2</span>
+            Register Within Three Minutes
+          </h3>
+          <ul class="feature-overview-stats">
+            <li class="-plr-20">
+              <h4>Funnel Participants</h4>
+              <strong>30,000</strong>
+            </li>
+            <li class="-plr-20">
+              <h4>Funnel Completion Rate</h4>
+              <strong>38%</strong>
+            </li>
+            <li class="-plr-20">
+              <div class="side-by-side-stat">
+                <h4>Avg. Time (minutes)</h4>
+                <strong>01:23</strong>
+              </div>
+              <div class="side-by-side-stat">
+                <h4>Under 1:30 minutes</h4>
+                <strong>68%</strong>
+              </div>
+            </li>
+          </ul>
+        </section>
+        <section class="feature-section -half -flow -scroller">
+          <h3 class="-funnel-header">
+            <em>30,000</em>
+            Funnel Participants
+          </h3>
+          <ol class="funnel-list">
+            <li>
+              <h4>
+                <span>Step 1</span>
+                Click Homepage CTA
+              </h4>
+              <div class="perc-arrow">
+                <em>23,000</em>
+                (77%)
+              </div>
+              <ul class="funnel-tags">
+                <li class="-red" style="height: 21px;"></li>
+                <li class="-green" style="top: 21px; height: 57px;"></li>
+              </ul>
+            </li>
+            <li>
+              <h4>
+                <span>Step 2</span>
+                Navigate to Registration Page
+              </h4>
+              <div class="perc-arrow">
+                <em>19,000</em>
+                (83%)
+              </div>
+              <ul class="funnel-tags">
+                <li class="-red" style="height: 19px;"></li>
+                <li class="-green" style="top: 19px; height: 59px;"></li>
+              </ul>
+            </li>
+            <li>
+              <h4>
+                <span>Step 3</span>
+                Submit Registration Form
+              </h4>
+              <div class="perc-arrow">
+                <em>11,500</em>
+                (61%)
+              </div>
+              <ul class="funnel-tags">
+                <li class="-red" style="height: 27px;"></li>
+                <li class="-green" style="top: 27px; height: 50px;"></li>
+              </ul>
+            </li>
+            <li>
+              <h4>
+                <span>Step 4</span>
+                Confirmation Email
+              </h4>
+              <div class="perc-arrow">
+                <em>11,400</em>
+                (99%)
+              </div>
+              <ul class="funnel-tags">
+                <li class="-red" style="height: 2px;"></li>
+                <li class="-green" style="top: 2px; height: 75px;"></li>
+              </ul>
+            </li>
+          </ol>
+        </section>
+      </div>
+    </article>
+    <aside class="app-sidebar -dark">
+      <ul class="feature-overview-stats -padded">
+        <li class="-active">
+          <a href="#goal-1" class="-enabled">
+            <h3>
+              <span class="color-accent">Goal 1</span>
+              Complete Registration Flow
+            </h3>
+            <div class="row">
+              <div class="side-by-side-stat -padded">
+                <h4>Total Conversions</h4>
+                <strong>5,500</strong>
+              </div>
+              <div class="side-by-side-stat -padded">
+                <h4>Conversion Rate</h4>
+                <strong>5%</strong>
+              </div>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="#goal-2" class="-enabled">
+            <h3>
+              <span class="color-accent">Goal 2</span>
+              Register Within Three Minutes
+            </h3>
+            <div class="row">
+              <div class="side-by-side-stat -padded">
+                <h4>Total Conversions</h4>
+                <strong>3,000</strong>
+              </div>
+              <div class="side-by-side-stat -padded">
+                <h4>Conversion Rate</h4>
+                <strong>3%</strong>
+              </div>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <h3>
+              <span class="color-accent">Goal 3</span>
+              Introduction Video is Played
+            </h3>
+            <div class="row">
+              <div class="side-by-side-stat -padded">
+                <h4>Total Conversions</h4>
+                <strong>2,200</strong>
+              </div>
+              <div class="side-by-side-stat -padded">
+                <h4>Conversion Rate</h4>
+                <strong>2.2%</strong>
+              </div>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <h3>
+              <span class="color-accent">Goal 4</span>
+              > 5 Pages Visited
+            </h3>
+            <div class="row">
+              <div class="side-by-side-stat -padded">
+                <h4>Total Conversions</h4>
+                <strong>4,200</strong>
+              </div>
+              <div class="side-by-side-stat -padded">
+                <h4>Conversion Rate</h4>
+                <strong>4.2%</strong>
+              </div>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <h3>
+              <span class="color-accent">Goal 5</span>
+              Ad Click
+            </h3>
+            <div class="row">
+              <div class="side-by-side-stat -padded">
+                <h4>Total Conversions</h4>
+                <strong>5,300</strong>
+              </div>
+              <div class="side-by-side-stat -padded">
+                <h4>Conversion Rate</h4>
+                <strong>5.8%</strong>
+              </div>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </aside>
+  </div>
+{% endblock %}

@@ -1,0 +1,187 @@
+{% extends '_layouts/base.html' %}
+
+{% set container_class = '-minimal' %}
+
+{% set module = 'analytics' %}
+
+{% block content %}
+  <div class="app-content -show-features" role="main">
+    <article class="feature">
+      <header class="feature-header -big-toolbar">
+        <h3>
+          <span>(June 2014 – To Date)</span>
+          Users
+        </h3>
+        {% include '_shared/analytics-header.html' with {link: 'users'} %}
+      </header>
+      <section class="feature-section">
+        <div id="analytics-map"></div>
+        <ol class="state-analytics-list">
+          <li>
+            California
+            <div class="info-perc">
+              20%
+              <span class="stat -green">3%</span>
+            </div>
+          </li>
+          <li>
+            New York
+            <div class="info-perc">
+              15%
+              <span class="stat -red">5%</span>
+            </div>
+          </li>
+          <li>
+            Pennsylvania
+            <div class="info-perc">
+              8%
+              <span class="stat -green">5%</span>
+            </div>
+          </li>
+          <li>
+            Wisconsin
+            <div class="info-perc">
+              5%
+              <span class="stat -red">6%</span>
+            </div>
+          </li>
+          <li>
+            Tennessee
+            <div class="info-perc">
+              4%
+              <span class="stat -green">5%</span>
+            </div>
+          </li>
+          <li>
+            Florida
+            <div class="info-perc">
+              3%
+              <span class="stat -green">5%</span>
+            </div>
+          </li>
+          <li>
+            Virginia
+            <div class="info-perc">
+              2.9%
+              <span class="stat -red">5%</span>
+            </div>
+          </li>
+          <li>
+            Texas
+            <div class="info-perc">
+              4%
+              <span class="stat -red">4%</span>
+            </div>
+          </li>
+          <li>
+            Georgia
+            <div class="info-perc">
+              2%
+              <span class="stat -red">6%</span>
+            </div>
+          </li>
+          <li>
+            Maine
+            <div class="info-perc">
+              1.4%
+              <span class="stat -green">3%</span>
+            </div>
+          </li>
+        </ol>
+      </section>
+    </article>
+    <aside class="app-sidebar">
+      <ul class="analaytics-users-list">
+        <li>
+          <h3>Age <em>(compared to last 3 months)</em></h3>
+          <ol class="age-analytics-list">
+            <li>
+              18-24
+              <div class="info-perc">20% <span class="stat -green -transparent">5%</span></div>
+            </li>
+            <li>
+              65+
+              <div class="info-perc">20% <span class="stat -green -transparent">3%</span></div>
+            </li>
+            <li>
+              55-64
+              <div class="info-perc">15% <span class="stat -red -transparent">4%</span></div>
+            </li>
+            <li>
+              45-54
+              <div class="info-perc">15% <span class="stat -green -transparent">6%</span></div>
+            </li>
+            <li>
+              35-44
+              <div class="info-perc">15% <span class="stat -red -transparent">3%</span></div>
+            </li>
+            <li>
+              25-34
+              <div class="info-perc">15% <span class="stat -red -transparent">4%</span></div>
+            </li>
+          </ol>
+        </li>
+        <li>
+          <h3>Gender <em>(compared to last 3 months)</em></h3>
+          <ol class="gender-analytics-list">
+            <li>
+              Male
+              <div class="info-perc">75% <span class="stat -green">5%</span></div>
+            </li>
+            <li>
+              Female
+              <div class="info-perc">25% <span class="stat -red">5%</span></div>
+            </li>
+          </ol>
+        </li>
+        <li>
+          <h3>Browsers</h3>
+          <ol class="browser-analytics-list">
+            <li>
+              <img src="./assets/images/browser-chrome.png" alt="Chrome">
+              Chrome
+              <span class="info-perc">20%</span>
+            </li>
+            <li>
+              <img src="./assets/images/browser-safari.png" alt="Safari">
+              Safari
+              <span class="info-perc">15%</span>
+            </li>
+            <li>
+              <img src="./assets/images/browser-firefox.png" alt="Firefox">
+              Firefox
+              <span class="info-perc">8%</span>
+            </li>
+            <li>
+              <img src="./assets/images/browser-ie10.png" alt="IE10">
+              IE10
+              <span class="info-perc">5%</span>
+            </li>
+            <li>
+              <img src="./assets/images/browser-ie9.png" alt="IE9">
+              IE9
+              <span class="info-perc">3%</span>
+            </li>
+          </ol>
+        </li>
+        <li>
+          <h3>Devices <em>(compared to last 3 months)</em></h3>
+          <ol class="devices-analytics-list">
+            <li>
+              Desktop
+              <div class="info-perc">42% <span class="stat -green">3%</span></div>
+            </li>
+            <li>
+              Tablet
+              <div class="info-perc">33% <span class="stat -red">5%</span></div>
+            </li>
+            <li>
+              Mobile
+              <div class="info-perc">25% <span class="stat -green">2%</span></div>
+            </li>
+          </ol>
+        </li>
+      </ul>
+    </aside>
+  </div>
+{% endblock %}

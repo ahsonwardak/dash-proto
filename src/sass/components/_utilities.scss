@@ -1,0 +1,166 @@
+
+// Padding
+
+.-plr-20 {
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+}
+
+.-pt-40 {
+  padding-top: 40px !important;
+}
+
+.-pt-20 {
+  padding-top: 20px !important;
+}
+
+// Ticketing Figure
+
+.ticketing-figure {
+  height: 120px;
+  left: 30px;
+  position: absolute;
+  top: 110px;
+  width: 120px;
+
+  &:hover {
+    .-default {
+      @include hidden-transition-content;
+    }
+
+    .-hover {
+      @include visible-transition-content;
+    }
+  }
+
+  img {
+    @include default-transition;
+    left: 0;
+    position: absolute;
+    top: 0;
+  }
+
+  .-default {
+    @include visible-transition-content;
+  }
+
+  .-hover {
+    @include hidden-transition-content;
+  }
+}
+
+// Accent Text
+
+.accent-text {
+  @include accent-text;
+}
+
+// Chart Wrapper
+
+.chart-wrapper {
+  float: left;
+  position: relative;
+  width: 100%;
+}
+
+// Chart Legend
+
+.chart-legend {
+  @include fill;
+
+  .axis {
+    @include small-heading;
+    position: absolute;
+
+    &.-y {
+      left: -60px;
+      top: 50%;
+      transform: translateY(-50%) rotate(-90deg);
+
+      &.-short {
+        left: -40px;
+      }
+    }
+
+    &.-x {
+      bottom: 16px;
+      left: 50%;
+      margin-left: 18px;
+      transform: translateX(-50%);
+    }
+
+    em {
+      font-family: Georgia;
+      text-transform: none;
+    }
+  }
+}
+
+// Pie Chart Callout
+
+.pie-chart-callout {
+  color: $grey-blue;
+  font-weight: bold;
+  left: 50%;
+  line-height: 1.1;
+  position: absolute;
+  text-align: center;
+  text-transform: uppercase;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+
+  strong {
+    @include sans-serif;
+    color: $blue;
+    display: block;
+    font-size: 66px;
+    font-weight: normal;
+  }
+}
+
+// Misc Alignment
+
+.float-right {
+  float: right;
+}
+
+// Force Small Heading
+
+h4.small-heading {
+  @include small-heading;
+  float: left;
+}
+
+.time-on-site-info,
+.bounce-rate-info {
+  position: relative;
+  top: 42px;
+}
+
+// Dropdown Arrows
+
+.arrow {
+  position: relative;
+
+  &:before {
+    @include pseudo;
+  }
+
+  &.-down:before {
+    background: url("../images/arrow-down.png") 50% 50% no-repeat;
+    height: 6px;
+    width: 10px;
+  }
+
+  &.-left:before {
+    background: url("../images/arrow-left.png") 50% 50% no-repeat;
+    height: 10px;
+    width: 6px;
+  }
+
+  &.-right:before {
+    background: url("../images/arrow-right.png") 50% 50% no-repeat;
+    height: 10px;
+    width: 6px;
+  }
+}
