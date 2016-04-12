@@ -26,3 +26,6 @@ This will start up a node server on localhost:3000 to serve the static assets, o
 
 ### Configuration
 All paths and plugin settings have been abstracted into a centralized config object in `gulp/config.js`. Adapt the paths and settings to the structure and needs of your project.
+
+### For Government Reviewers
+Follow the instructions above to create your own Build folder of views/HTML pages.  Alternatively, you can simply browse/download the Build folder to view the front-end prototype.  The project is no longer live, as it was meant to be a prototype for a future projects around digital analytics for IT projects in the Federal Government.
